@@ -1,25 +1,51 @@
 {
   "name": "@d3vv3/pi-notify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Native desktop notifications for Pi with bundled opencode-notifier sounds",
   "type": "module",
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/d3vv3/pi-notify.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d3vv3/pi-notify.git"
+  },
   "homepage": "https://github.com/d3vv3/pi-notify#readme",
-  "bugs": { "url": "https://github.com/d3vv3/pi-notify/issues" },
-  "publishConfig": { "access": "public" },
-  "keywords": ["pi-package", "pi", "notifications"],
-  "files": ["src", "sounds", "README.md", "LICENSE"],
-  "pi": { "extensions": ["./src/index.ts"] },
+  "bugs": {
+    "url": "https://github.com/d3vv3/pi-notify/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "notifications"
+  ],
+  "files": [
+    "src",
+    "sounds",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
   "scripts": {
     "test": "tsx --test test/*.test.ts",
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm test",
     "prepublishOnly": "npm run check"
   },
-  "engines": { "node": "^22.22.2 || ^24.15.0 || >=26.0.0" },
-  "peerDependencies": { "@earendil-works/pi-coding-agent": ">=1.2.0" },
-  "dependencies": { "node-notifier": "^11.0.0" },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=1.2.0"
+  },
+  "dependencies": {
+    "node-notifier": "^11.0.0"
+  },
   "devDependencies": {
     "@earendil-works/pi-coding-agent": "1.2.0",
     "@types/node": "^24.0.0",
